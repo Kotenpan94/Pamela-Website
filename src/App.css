@@ -1,0 +1,193 @@
+/* Reset / base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* App wrapper */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #e5e7eb; /* light gray */
+  margin: 40px auto;
+  width: 100%;
+}
+
+/* NAVBAR is in Navbar.css – leave it there */
+
+/* Hero Section */
+#hero {
+  background-color: #f1f5ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  padding: 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #007bff; /* calming blue */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* darker on hover */
+  transform: translateY(-2px); /* subtle lift */
+}
+
+button:active {
+  background-color: #004080;
+  transform: translateY(0);
+}
+
+/* Shared Section Styles */
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section p,
+section li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* About Section */
+#about {
+  background-color: #f1f5ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  padding: 40px;
+}
+
+/* Services Section */
+#services {
+  background-color: #f1f5ff;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 40px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.services li::before {
+  content: "✔ ";
+  color: #007bff;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f1f5ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.profile-pic {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* centers & adds spacing under image */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.hero-text {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.office-pic {
+  width: 70%; /* makes it take up 70% of container width */
+  max-width: 800px; /* but never get bigger than 800px */
+  height: auto; /* keeps proportions */
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* optional: subtle shadow */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  section {
+    padding: 60px 15px;
+  }
+  .services ul {
+    grid-template-columns: 1fr;
+  }
+}
