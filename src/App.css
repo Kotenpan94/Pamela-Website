@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background-color: #f8f9fa;
   color: #000000;
   line-height: 1.6;
@@ -31,9 +31,8 @@ hr {
 
 /* Hero Section */
 #hero {
-  background-color: #f1f5ff;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  background-color: transparent;
+
   margin-top: 30px;
   padding: 40px;
   text-align: center;

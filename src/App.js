@@ -16,13 +16,16 @@ export default function App() {
 
   return (
     <div className="App">
-      <Navbar active={active} onNav={setActive} />
-      <div id="topOfPage">
+      <Navbar />
+
+      {/* HOME / HERO */}
+      <section id="hero" className="hero-section">
         <h1>
-          Pamela Goldsteen, LCSW Experiential,<br></br> Somatic Psychotherapy
+          Pamela Goldsteen, LCSW Experiential,
+          <br /> Somatic Psychotherapy
         </h1>
         <h2>Get your body into the conversation</h2>
-      </div>
+      </section>
 
       {/* ABOUT */}
       <section
@@ -92,14 +95,20 @@ export default function App() {
         </p>
         <h3>Group Psychotherapy</h3>
         <p>
-          Group psychotherapy is a powerful, cost-efficient vehicle for healing.
-          Group therapy provides a place to help you recognize you are not alone
-          in your suffering, help normalize life challenges, gain skills to
-          navigate difficult emotions, recognize your strengths and more
-          effectively advocate for your needs. You will learn to give and
-          receive support from others who are experiencing similar challenges. I
-          offer therapeutic support groups for parents of children with special
-          needs and trauma-processing groups for adults.
+          <p>
+            Group therapy is a powerful and more affordable way to heal. It
+            offers a safe and confidential space where you can connect with
+            others who share similar struggles and realize you are not alone. In
+            a group setting, you'll have the chance to normalize your
+            experiences, practice new ways of relating to others, and learn from
+            a supportive community. It's a place for both individual growth and
+            shared understanding. I offer therapeutic support groups for:
+          </p>
+
+          <ul>
+            <li>Parents of children with special needs</li>
+            <li>Trauma-processing groups for adults</li>
+          </ul>
         </p>
         <p>
           <a href="tel:+2016144031" className="phone-link">
@@ -125,36 +134,49 @@ export default function App() {
         <img src={officePic} alt="Pamela Goldsteen" className="office-pic" />
 
         <p>
-          I specialize in experiential somatic modalities that gently and
-          effectively support healing and integration of the nervous system.
-          This approach is highly effective at alleviating trauma and stress
-          disorders including PTSD, developmental and relational trauma,
-          depression, anxiety, OCD, chronic pain, and grief. <br></br> If you’ve
-          had the experience of knowing intellectually that a behavior does not
-          serve you, yet remain powerless to change it, it may be driven by old
-          emotional beliefs operating out of your conscious awareness. Somatic,
-          experiential psychotherapy can help bridge the gap between what we
-          know to be true and what we actually do. <br></br>Traumatic events are
-          whole body experiences, held by the entire body and not just the
-          thinking brain. I will teach you to track your nervous system and
-          create a conversation between your thinking brain and your body.
-          Together we will facilitate experiences in the treatment room to
-          gently support you to get in touch with and then update subconsciously
-          held material that drives deeply ingrained behaviors that are harmful
-          to ourselves and our relationships. <br></br>All the modalities I am
-          trained in, including EMDR, Internal Family Systems, Somatic
-          Experiencing and Coherence Psychotherapy are effective ways to support
-          memory reconsolidation, which is the basis for all effective trauma
-          treatment. When memory consolidation is successful, it creates
-          permanent, effortless change in the behaviors and beliefs that no
-          longer serve you.
+          <p>
+            I specialize in experiential somatic modalities that gently and
+            effectively support healing and integration of the nervous system.
+            This neurobiological approach is highly effective at alleviating
+            trauma and stress disorders including PTSD, developmental and
+            relational trauma, depression, anxiety, OCD, chronic pain, and
+            grief.
+          </p>
+
+          <p>
+            If you’ve had the experience of knowing intellectually that a
+            behavior does not serve you, yet remain powerless to change it, it
+            may be driven by old emotional beliefs operating out of your
+            conscious awareness. Somatic, experiential psychotherapy can help
+            bridge the gap between what we know to be true and what we actually
+            do.
+          </p>
+
+          <p>
+            Traumatic events are whole body experiences, held by the entire body
+            and not just the thinking brain. I will teach you to track your
+            nervous system and create a conversation between your thinking brain
+            and your body. Together we will facilitate experiences in the
+            treatment room to gently support you to get in touch with and then
+            update subconsciously held material that drives deeply ingrained
+            behaviors that are harmful to ourselves and our relationships.
+          </p>
+
+          <p>
+            All the modalities I am trained in, including EMDR, Internal Family
+            Systems, Somatic Experiencing and Coherence Psychotherapy are
+            effective ways to support memory reconsolidation, which is the basis
+            for all effective trauma treatment. When memory consolidation is
+            successful, it creates permanent, effortless change in the behaviors
+            and beliefs that no longer serve you.
+          </p>
         </p>
       </section>
 
       <hr></hr>
 
       <section
-        id="services"
+        id="rates"
         className={`section ${active === "rates" ? "show" : "hide"}`}
         tabIndex="-1"
       >
@@ -164,17 +186,31 @@ export default function App() {
           I am an out-of-network provider and am not paneled with any insurance
           companies. If you have out-of-network benefits I will provide you with
           a monthly superbill to submit to your insurer for out-of-network
-          reimbursement. Here’s what to ask your insurance company to confirm
-          your coverage: <br></br> 1. Do I have out of network coverage for
-          mental health services? <br></br> 2. If yes, what is my deductible?{" "}
-          <br></br> 3. When does my deductible renew? (For most policies this is
-          January 1, but not all) <br></br> 4. How much do you cover for CPT
-          codes 90791 (intake examination), 90834 (for individuals) and 90847
-          (for couples)? <br></br>Individual sessions are 50 minutes, and my fee
-          is $250. Couples and family sessions are 50 minutes and my fee is $275
+          reimbursement.
+        </p>
+
+        <p>
+          Here’s what to ask your insurance company to confirm your coverage:
+        </p>
+
+        <ol>
+          <li>Do I have out of network coverage for mental health services?</li>
+          <li>If yes, what is my deductible?</li>
+          <li>
+            When does my deductible renew? (For most policies this is January 1,
+            but not all)
+          </li>
+          <li>
+            How much do you cover for CPT codes 90791 (intake examination),
+            90834 (for individuals) and 90847 (for couples)?
+          </li>
+        </ol>
+
+        <p>
+          Individual sessions are 50 minutes, and my fee is $250. Couples and
+          family sessions are 50 minutes and my fee is $275.
         </p>
       </section>
-
       <hr></hr>
 
       {/* CONTACT */}
