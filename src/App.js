@@ -17,23 +17,12 @@ export default function App() {
   return (
     <div className="App">
       <Navbar active={active} onNav={setActive} />
-
-      {/* HERO */}
-      <section
-        id="hero"
-        className={`section ${active === "hero" ? "show" : "hide"}`}
-        tabIndex="-1"
-      >
-        <img src={pamelaPic} alt="Pamela Goldsteen" className="profile-pic" />
-        <h1>Hi, I&apos;m Pamela Goldsteen</h1>
-        <p>
-          I’m a social worker dedicated to helping individuals and families find
-          healing, support, and growth.
-        </p>
-        <button onClick={() => setActive("contact")}>Contact Me</button>
-      </section>
-
-      <hr></hr>
+      <div id="topOfPage">
+        <h1>
+          Pamela Goldsteen, LCSW Experiential,<br></br> Somatic Psychotherapy
+        </h1>
+        <h2>Get your body into the conversation</h2>
+      </div>
 
       {/* ABOUT */}
       <section
@@ -51,14 +40,16 @@ export default function App() {
           I earned a doctorate in Art History and worked in non- profit
           fundraising. This background gave me a deep appreciation for the
           unique stories we all carry and the importance of finding our purpose.
-          My past work taught me how to guide people through complex narratives,
-          a skill that I now bring to my clinical practice.
+          My past work taught me how to guide people through complex narratives
+          and arrive at a cohesive story that gives context to their
+          experiences, a skill that I now bring to my clinical practice.
         </p>
         <p>
           Prior to opening my practice, I worked in hospital and community
-          mental health settings. Before becoming a psychotherapist I received a
-          doctorate in Art History and worked in non- profit fundraising. I
-          practice in-person and virtually in Montclair New Jersey. I see
+          mental health settings.
+        </p>
+        <p>
+          I practice in-person and virtually in Montclair New Jersey. I see
           clients at the offices of the{" "}
           <a
             href="https://mindbodytherapycollective.com"
@@ -67,17 +58,37 @@ export default function App() {
           >
             MindBody Therapy Collective
           </a>
-          , , which is home to a group of dedicated psychotherapists and
+          , which is home to a group of dedicated psychotherapists and
           complementary healing professionals.
         </p>
-        <h3>Who I Treat</h3>
-        <h4>Individuals and Couples</h4>
+        <h3>Common Concerns I Work With</h3>
         <p>
-          I work with adults, families and couples throughout the life span. I
-          draw on my experience as  a parent of children with special education
-          needs to support them in managing the stressors associated with
-          raising neurodivergent children whose needs are not well supported in
-          a traditional setting.
+          <p>
+            I believe that traumatic events are at the root of much psychic
+            distress and addressing them is the best way to alleviate
+            stress-induced conditions. I help individuals, couples, and families
+            find healing and integration through specialized somatic therapies.
+            I can work successfully with you to alleviate:
+          </p>
+
+          <ul>
+            <li>Chronic Stress &amp; Tension</li>
+            <li>Anxiety &amp; Panic Attacks</li>
+            <li>Trauma Recovery (PTSD)</li>
+            <li>Difficulty with Emotional Regulation</li>
+            <li>Relationship Stress</li>
+          </ul>
+
+          <p>I also work with people who are:</p>
+
+          <ul>
+            <li>Survivors of abuse and neglect</li>
+            <li>Adult children of parents with narcissistic traits</li>
+            <li>
+              Parents and families of neurodivergent and developmentally
+              disabled children
+            </li>
+          </ul>
         </p>
         <h3>Group Psychotherapy</h3>
         <p>
