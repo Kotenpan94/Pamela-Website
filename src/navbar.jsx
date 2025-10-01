@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="nav-logo">Pamela Goldsteen, LCSW</div>
-      <ul className="nav-links">
+
+      {/* Hamburger icon */}
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </div>
+
+      {/* Nav links */}
+      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
           <a href="#hero">Home</a>
         </li>
