@@ -9,19 +9,11 @@ import Splash from "./Splash.jsx";
 export default function App() {
   const [active, setActive] = useState("hero");
 
-  // optional: move keyboard focus to the newly shown section
-  useEffect(() => {
-    const el = document.getElementById(active);
-    if (el) el.focus();
-  }, [active]);
+  const [showSplash, setShowSplash] = useState(true);
 
-  const [showSplash, setShowSplash] = useState(true); // ✅ add this
-
-  // Hide splash after 2 seconds automatically (you can adjust time)
-  useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 2000);
-    return () => clearTimeout(timer);
-  }, []);
+  if (showSplash) {
+    return <Splash onDismiss={() => setShowSplash(false)} />;
+  }
 
   const dismissSplash = () => setShowSplash(false); // ✅ allows manual close
 

@@ -2,36 +2,50 @@
 .splash {
   position: fixed;
   inset: 0;
-  background-color: #f6f4f2; /* soft, calming tone */
+  background-color: #f7f7f7; /* light neutral tone */
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
 .splash-content {
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .splash-title {
-  font-family: "Playfair Display", serif; /* or your chosen font */
-  font-size: clamp(26px, 5vw, 42px);
-  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .splash-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: black;
+  background-color: #333;
   color: white;
   border: none;
-  border-radius: 6px;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .splash-button:hover {
-  background-color: #444;
+  background-color: #555;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
