@@ -15,13 +15,6 @@ export default function App() {
     return <Splash onDismiss={() => setShowSplash(false)} />;
   }
 
-  const dismissSplash = () => setShowSplash(false); // ✅ allows manual close
-
-  useEffect(() => {
-    const el = document.getElementById(active);
-    if (el) el.focus();
-  }, [active]);
-
   return (
     <div className="App">
       <Navbar />
