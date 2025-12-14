@@ -32,7 +32,6 @@ hr {
 /* Hero Section */
 #hero {
   background-color: transparent;
-
   margin-top: 30px;
   padding: 40px;
   text-align: center;
@@ -173,6 +172,37 @@ footer {
   margin: 20px auto;
   border-radius: 12px; /* rounded corners */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* optional: subtle shadow */
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+
+  background-image: url("./media/Pamela.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HERO should not be constrained by section defaults */
+#hero.hero-section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.hero-overlay {
+  max-width: 600px;
+  margin-left: 8vw; /* 👈 THIS is the magic */
+  padding: 20px;
+
+  text-align: left;
 }
 
 /* Responsive tweaks */

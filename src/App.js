@@ -20,12 +20,15 @@ export default function App() {
       <Navbar />
 
       {/* HOME / HERO */}
+      {/* HOME / HERO */}
       <section id="hero" className="hero-section">
-        <h1>
-          Pamela Goldsteen, LCSW Experiential,
-          <br /> Somatic Psychotherapy
-        </h1>
-        <h2>Get your body into the conversation</h2>
+        <div className="hero-overlay">
+          <h1>
+            Pamela Goldsteen, LCSW Experiential,
+            <br /> Somatic Psychotherapy
+          </h1>
+          <h2>Get your body into the conversation</h2>
+        </div>
       </section>
 
       {/* ABOUT */}
