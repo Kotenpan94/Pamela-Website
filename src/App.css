@@ -186,7 +186,16 @@ footer {
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+/* soft fade layer */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 30, 20, 0.28); /* adjust 0.20–0.40 */
+  z-index: 1;
 }
 
 /* HERO should not be constrained by section defaults */
@@ -198,11 +207,32 @@ footer {
 }
 
 .hero-overlay {
-  max-width: 600px;
-  margin-left: 8vw; /* 👈 THIS is the magic */
-  padding: 20px;
+  max-width: 520px;
+  margin-right: 8vw;
 
+  /* move text up */
+  transform: translateY(-12vh);
+
+  padding: 0;
   text-align: left;
+  color: #ffffff; /* 👈 white text */
+}
+
+.hero-overlay h1,
+.hero-overlay h2 {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-overlay h1 {
+  font-size: 2.3rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.hero-overlay h2 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 /* Responsive tweaks */
