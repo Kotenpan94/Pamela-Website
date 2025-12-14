@@ -53,7 +53,6 @@ h6,
 
 body {
   font-family: "Muli", Arial, sans-serif;
-  font-weight: 500; /* try 400 first */
   font-size: 18px; /* 16–18px is a good range */
   line-height: 1.7; /* more breathing room */
   color: #222; /* softer than pure black */
