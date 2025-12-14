@@ -207,32 +207,31 @@ footer {
 }
 
 .hero-overlay {
-  max-width: 520px;
-  margin-right: 8vw;
-
-  /* move text up */
-  transform: translateY(-12vh);
-
+  max-width: 560px;
+  margin-right: 8vw; /* push into right-side space */
+  margin-top: -6vh; /* move up a bit */
   padding: 0;
   text-align: left;
-  color: #ffffff; /* 👈 white text */
 }
 
 .hero-overlay h1,
 .hero-overlay h2 {
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55); /* makes white text readable */
 }
 
 .hero-overlay h1 {
-  font-size: 2.3rem;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 3.2vw, 3.1rem);
+  line-height: 1.12;
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
 }
 
 .hero-overlay h2 {
-  font-size: 1.15rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
   font-weight: 400;
-  opacity: 0.9;
+  line-height: 1.3;
+  opacity: 0.95;
 }
 
 /* Responsive tweaks */
