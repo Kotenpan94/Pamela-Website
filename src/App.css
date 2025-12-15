@@ -5,13 +5,6 @@
   padding: 0;
 }
 
-body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #f8f9fa;
-  color: #000000;
-  line-height: 1.6;
-}
-
 /* App wrapper */
 .App {
   text-align: center;
