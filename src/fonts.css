@@ -1,3 +1,7 @@
+/* =======================
+   Muli – body text
+   ======================= */
+
 @font-face {
   font-family: "Muli";
   src: url("./fonts/Muli.ttf") format("truetype");
@@ -13,6 +17,27 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Optional – only if you actually use these */
+@font-face {
+  font-family: "Muli";
+  src: url("./fonts/Muli-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("./fonts/Muli-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =======================
+   Quattrocento Sans – headings
+   ======================= */
 
 @font-face {
   font-family: "Quattrocento Sans";
