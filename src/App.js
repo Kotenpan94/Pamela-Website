@@ -210,10 +210,7 @@ export default function App() {
           </li>
         </ol>
 
-        <p>
-          Individual sessions are 50 minutes, and my fee is $250. Couples and
-          family sessions are 50 minutes and my fee is $275.
-        </p>
+        <p>My fee is $275 for a 50 minute session.</p>
       </section>
       <hr></hr>
 
