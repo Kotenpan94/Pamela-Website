@@ -1,6 +1,6 @@
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 h1,
@@ -15,7 +15,7 @@ h6,
 }
 
 body {
-  font-family: "Muli", Arial, sans-serif;
+  font-family: "DM Sans", Arial, sans-serif;
   font-size: 18px; /* 16–18px is a good range */
   line-height: 1.7; /* more breathing room */
   color: #222; /* softer than pure black */
