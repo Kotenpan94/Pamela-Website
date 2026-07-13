@@ -100,19 +100,41 @@ export default function App() {
         <h3>Group Psychotherapy</h3>
         <p>
           <p>
-            Group therapy is a powerful and more affordable way to heal. It
-            offers a safe and confidential space where you can connect with
-            others who share similar struggles and realize you are not alone. In
-            a group setting, you'll have the chance to normalize your
-            experiences, practice new ways of relating to others, and learn from
-            a supportive community. It's a place for both individual growth and
-            shared understanding. I offer therapeutic support groups for:
+            Have you ever felt like something is deeply wrong with you? Felt
+            profoundly alone in your experiences, or found yourself in
+            friendships and romantic relationships that feel one-sided and
+            unfulfilling? Group psychotherapy offers a powerful and
+            cost-effective path toward healing. It provides a safe, confidential
+            space where you can connect with others who share similar struggles
+            and begin to realize you are not alone. In a group setting,
+            you&#39;ll have the opportunity to normalize your experiences,
+            practice new ways of relating to others, and learn within a
+            genuinely supportive community. This is a process group, which is
+            different from a psychoeducational group. Rather than focusing
+            primarily on information or skills, a process group works through
+            the relationships happening in the room. You will develop new
+            relational skills and begin to recognize old interpersonal patterns
+            that made sense when your growth and survival depended on
+            environments that couldn&#39;t reliably offer consistent, loving
+            care. I actively facilitate the group, which means I help members
+            communicate directly with one another, ensure all voices are heard,
+            and keep us focused and on track. Group therapy can be especially
+            meaningful for people who grew up in environments where, for a
+            variety of reasons, parents or caregivers could not adequately meet
+            your core emotional and attachment needs. This work creates space to
+            process the sadness and grief tied to what you didn&#39;t receive
+            and to loosen the grip of the emotional beliefs you developed to
+            compensate. This kind of healing runs deep, because many people who
+            come to group therapy have never experienced relationships built on
+            genuine reciprocity rather than emotional labor. The group directly
+            challenges the isolation and distorted relational expectations so
+            many of us absorbed growing up. You will experience what it means to
+            feel truly understood: to have your inner world seen and met with
+            compassion, not because you&#39;ve earned it, but simply because you
+            are human. You will have the experience of genuine mutuality and
+            notice your interpersonal patterns as they unfold in real time. This
+            is where change begins.
           </p>
-
-          <ul>
-            <li>Parents of children with special needs</li>
-            <li>Trauma-processing groups for adults</li>
-          </ul>
         </p>
         <p>
           <a href="tel:+2016144031" className="phone-link">
