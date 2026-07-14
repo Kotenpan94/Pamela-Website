@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./navbar.jsx";
 import "./App.css";
-import pamelaPic from "./media/Pamela.jpg";
+//import pamelaPic from "./media/Pamela.jpg";
 import officePic from "./media/office.jpeg";
 import pamelaPic2 from "./media/Pamela2.jpg";
 import Splash from "./Splash.jsx";
 
 export default function App() {
-  const [active, setActive] = useState("hero");
-
+  const [active] = useState("hero");
   const [showSplash, setShowSplash] = useState(true);
 
   if (showSplash) {
