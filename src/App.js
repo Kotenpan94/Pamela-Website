@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./navbar.jsx";
 import "./App.css";
-//import pamelaPic from "./media/Pamela.jpg";
 import officePic from "./media/office.jpeg";
 import pamelaPic2 from "./media/Pamela2.jpg";
 import Splash from "./Splash.jsx";
