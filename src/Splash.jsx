@@ -16,9 +16,9 @@ export default function Splash({ onDismiss }) {
         <h1 className="splash-title fade-in">
           Get your body into the conversation
         </h1>
-        <button className="splash-button" onClick={onDismiss}>
+        {/* <button className="splash-button" onClick={onDismiss}>
           Enter Site
-        </button>
+        </button> */}
       </div>
     </div>
   );

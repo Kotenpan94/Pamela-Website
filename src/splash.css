@@ -8,7 +8,9 @@
   justify-content: center;
   flex-direction: column;
   z-index: 9999;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
 }
 
 .splash-content {
@@ -36,6 +38,11 @@
 
 .splash-button:hover {
   background-color: #555;
+}
+
+.splash-fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* Animation */

@@ -21,10 +21,8 @@ export default function App() {
       {/* HOME / HERO */}
       <section id="hero" className="hero-section">
         <div className="hero-overlay">
-          <h1>
-            Pamela Goldsteen, LCSW Experiential,
-            <br /> Somatic Psychotherapy
-          </h1>
+          {/* Move experiential to next line and remove comma */}
+          <h1>Pamela Goldsteen, LCSW Experiential, Somatic Psychotherapy</h1>
           <h2>Get your body into the conversation</h2>
         </div>
       </section>
