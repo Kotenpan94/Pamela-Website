@@ -1,259 +1,585 @@
-/* Reset / base */
+:root {
+  --paper: #ffffff;
+  --sand: #f2f1ec;
+  --ink: #232320;
+  --ink-soft: #64645d;
+  --clay: #46583b;
+  --clay-deep: #36452c;
+  --moss: #59684a;
+  --dusk: #1e2a1c;
+  --dusk-ink: #f2f1ec;
+  --card: #ffffff;
+  --line: rgba(35, 35, 32, 0.12);
+  --focus: #36452c;
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Karla", ui-sans-serif, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* App wrapper */
-.App {
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
-hr {
-  border: none;
-  border-top: 2px solid #e5e7eb; /* light gray */
-  margin: 40px auto;
-  width: 100%;
+h1,
+h2,
+h3 {
+  font-family: "Frank Ruhl Libre", ui-serif, Georgia, serif;
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+  margin: 0;
+  color: var(--ink);
 }
 
-/* NAVBAR is in Navbar.css – leave it there */
-
-/* Hero Section */
-#hero {
-  background-color: transparent;
-  margin-top: 30px;
-  padding: 40px;
-  text-align: center;
+p {
+  margin: 0;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+a {
+  color: inherit;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 30px;
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay-deep);
 }
 
-button {
-  background-color: #007bff; /* calming blue */
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #0056b3; /* darker on hover */
-  transform: translateY(-2px); /* subtle lift */
-}
-
-button:active {
-  background-color: #004080;
-  transform: translateY(0);
-}
-
-/* Shared Section Styles */
-section {
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-section p,
-section li {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  color: #444;
-}
-
-/* About Section */
-#about {
-  background-color: #f1f5ff;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  margin-top: 30px;
-  padding: 40px;
-}
-
-/* Services Section */
-#services {
-  background-color: #f1f5ff;
-  border-radius: 8px;
-  margin-top: 30px;
-  padding: 40px;
-}
-
-.services ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 20px;
-}
-
-.services li::before {
-  content: "✔ ";
-  color: #007bff;
-}
-
-/* Contact Section */
-#contact {
-  background-color: #f1f5ff;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 40px;
-  text-align: center;
-}
-
-.contact a {
-  color: #000000;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  background: var(--clay);
+  color: #fffdf9;
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
   text-decoration: none;
-  font-weight: bold;
+  border: 1px solid transparent;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+.btn:hover {
+  background: var(--clay-deep);
+  transform: translateY(-1px);
+}
+.btn:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
 }
 
-.contact a:hover {
-  text-decoration: underline;
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid currentColor;
+  color: inherit;
+}
+.btn-outline:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
-/* Footer */
-footer {
-  margin-top: auto;
-  padding: 20px;
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  font-size: 0.9rem;
-}
-.profile-pic {
-  width: 220px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; /* centers & adds spacing under image */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.hero-text {
-  text-align: center;
-  max-width: 600px;
+.wrap {
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 
-.office-pic {
-  width: 70%; /* makes it take up 70% of container width */
-  max-width: 800px; /* but never get bigger than 800px */
-  height: auto; /* keeps proportions */
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px; /* rounded corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* optional: subtle shadow */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
 }
 
-.hero-section {
-  position: relative;
-  min-height: 100vh;
-  width: 100vw;
-
-  background-image: url("./media/Pamela.jpg");
-  background-size: cover;
-  background-position: 70% 20%; /* shift image left so face isn't behind text */
-  background-repeat: no-repeat;
-
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
 }
-
-/* soft fade layer */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 30, 20, 0.28); /* adjust 0.20–0.40 */
-  z-index: 1;
+.wordmark {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
-
-/* HERO should not be constrained by section defaults */
-#hero.hero-section {
-  max-width: none;
+.wordmark span {
+  display: block;
+  font-family: "Karla", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+nav.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: clamp(1rem, 2.5vw, 2.2rem);
   margin: 0;
   padding: 0;
-  width: 100vw;
+}
+nav.primary-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding-bottom: 0.2rem;
+  border-bottom: 1.5px solid transparent;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+nav.primary-nav a:hover {
+  color: var(--ink);
+  border-color: var(--clay);
+}
+.nav-toggle {
+  display: none;
 }
 
-.hero-overlay {
-  max-width: 560px;
-  margin-left: 1.5vw; /* push into right-side space */
-  margin-top: 10vh; /* move up a bit */
+/* ---------- Hero ---------- */
+.section-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(3rem, 7vw, 5.5rem);
+}
+.hero-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-deco circle {
+  transition: none;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+.section-hero h1 {
+  font-size: clamp(2.4rem, 5.2vw, 3.6rem);
+  margin: 0.6rem 0 1.1rem;
+}
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin-bottom: 1.6rem;
+}
+.hero-meta {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+.hero-actions .note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Welcome / About ---------- */
+.section-welcome {
+  padding: clamp(3rem, 7vw, 5rem) 0;
+}
+.welcome-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.portrait {
+  aspect-ratio: 4 / 5;
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      color-mix(in srgb, var(--clay) 35%, transparent),
+      transparent 60%
+    ),
+    var(--sand);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.welcome-text .eyebrow {
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.welcome-text h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  margin-bottom: 1.2rem;
+}
+blockquote {
+  margin: 0 0 1.3rem;
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--clay);
+  font-family: "Frank Ruhl Libre", serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+.welcome-text p.body-text {
+  color: var(--ink-soft);
+  margin-bottom: 1.2rem;
+}
+.credential-line {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  margin-bottom: 1.4rem;
+}
+.credential-line strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.link-arrow {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--clay-deep);
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 0.1rem;
+}
+
+/* ---------- Specializations ---------- */
+.section-specialties {
+  background: var(--sand);
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+}
+.specialties-head {
+  max-width: 600px;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.specialties-head .eyebrow {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.specialties-head h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  padding: 1.8rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.card-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--moss) 18%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.card h3 {
+  font-size: 1.15rem;
+}
+.card p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+.card .link-arrow {
+  font-size: 0.88rem;
+  align-self: flex-start;
+}
+
+/* ---------- CTA banner ---------- */
+.section-cta {
+  background: var(--dusk);
+  color: var(--dusk-ink);
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-cta h2 {
+  color: var(--dusk-ink);
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+  margin-bottom: 0.9rem;
+}
+.section-cta p {
+  color: color-mix(in srgb, var(--dusk-ink) 78%, transparent);
+  margin-bottom: 1.7rem;
+  font-size: 1.05rem;
+}
+.section-cta .btn {
+  background: var(--clay);
+}
+.section-cta .btn:hover {
+  background: var(--clay-deep);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: clamp(2.8rem, 6vw, 4rem) 0 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.4rem;
+}
+.footer-grid h4 {
+  font-family: "Karla", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.8rem;
+}
+.footer-grid p,
+.footer-grid a {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-bottom: 0.35rem;
+}
+.footer-grid a:hover {
+  color: var(--clay-deep);
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.footer-bottom nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
   padding: 0;
-  text-align: left;
+}
+.footer-bottom nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.footer-bottom nav a:hover {
+  color: var(--clay-deep);
 }
 
-.hero-overlay h1,
-.hero-overlay h2 {
-  color: #fff;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55); /* makes white text readable */
-  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
-}
-
-.hero-overlay h1 {
-  font-size: clamp(2rem, 1.9vw, 3.1rem);
-  line-height: 1.12;
-  letter-spacing: 0.3px;
-  margin-bottom: 12px;
-}
-
-.hero-overlay h2 {
-  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
-  font-weight: 400;
-  line-height: 1.3;
-  opacity: 0.95;
-}
-.App {
-  animation: fadeIn 0.35s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media (max-width: 720px) {
+  nav.primary-nav ul {
+    gap: 1rem;
   }
-  to {
-    opacity: 1;
+  nav.primary-nav a {
+    font-size: 0.88rem;
   }
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  section {
-    padding: 60px 15px;
-  }
-  .services ul {
+  .welcome-grid {
     grid-template-columns: 1fr;
+  }
+  .portrait {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+  nav.primary-nav ul {
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+  nav.primary-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* ---------- Nav active state (added for multi-page routing) ---------- */
+.wordmark {
+  text-decoration: none;
+  display: inline-block;
+}
+nav.primary-nav a.active {
+  color: var(--ink);
+  border-color: var(--clay);
+}
+
+/* ---------- Real photos dropped into the .portrait slot / prose pages ---------- */
+.portrait-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 1.4rem;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+/* ---------- Inner-page hero (About / Services / Fees / Contact) ---------- */
+.page-hero {
+  padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(1.75rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--line);
+}
+.page-hero .eyebrow { display: block; margin-bottom: 0.6rem; }
+.page-hero h1 {
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  max-width: 32ch;
+}
+.page-hero p {
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin-top: 0.9rem;
+  font-size: 1.05rem;
+}
+
+/* ---------- Long-form content pages ---------- */
+.prose-section {
+  padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(3.5rem, 7vw, 5.5rem);
+}
+.prose-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+.prose-grid .portrait-photo {
+  width: 100%;
+  border-radius: 1.2rem;
+  border: 1px solid var(--line);
+  display: block;
+  position: sticky;
+  top: 6rem;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+.prose h2 {
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  margin: 2.4rem 0 0.9rem;
+}
+.prose h2:first-child { margin-top: 0; }
+.prose h3 {
+  font-family: 'Frank Ruhl Libre', ui-serif, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 2rem 0 0.7rem;
+}
+.prose p {
+  color: var(--ink-soft);
+  margin-bottom: 1.05rem;
+  max-width: 68ch;
+}
+.prose ul, .prose ol {
+  color: var(--ink-soft);
+  margin: 0 0 1.3rem;
+  padding-left: 1.35rem;
+  max-width: 62ch;
+}
+.prose li { margin-bottom: 0.45rem; }
+.prose a.text-link {
+  color: var(--clay-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose .full-photo {
+  width: 100%;
+  max-width: 620px;
+  border-radius: 1.2rem;
+  border: 1px solid var(--line);
+  margin: 0.5rem 0 1.8rem;
+  display: block;
+}
+.prose .callout {
+  background: var(--sand);
+  border-radius: 1rem;
+  padding: 1.4rem 1.6rem;
+  margin: 1.6rem 0;
+  max-width: 62ch;
+}
+.prose .callout p { color: var(--ink); margin-bottom: 0.4rem; }
+.prose .callout p:last-child { margin-bottom: 0; }
+
+@media (max-width: 720px) {
+  .prose-grid { grid-template-columns: 1fr; }
+  .prose-grid .portrait-photo {
+    position: static;
+    max-width: 280px;
+    margin: 0 auto;
   }
 }
